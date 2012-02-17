@@ -14,4 +14,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+    (r'^/$', 'django.views.generic.simple.redirect_to', {'url':'/static/index.html'}),
+    (r'^samples/', include('samples.urls')),  
 )
